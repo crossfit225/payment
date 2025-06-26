@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>송금 계좌안내</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: 'Pretendard', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .account-info {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .account-number {
+      font-weight: bold;
+      font-size: 20px;
+      color: #444;
+    }
+    button {
+      background-color: #5c8df6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #476bd2;
+    }
+    .kakaopay {
+      margin-top: 25px;
+    }
+    .kakaopay a {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #fee500;
+      color: #3c1e1e;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>송금 계좌정보</h2>
+    <p><strong>은행:</strong> 대구은행</p>
+    <p><strong>계좌번호:</strong> <span id="account">01022225952</span></p>
+    <button onclick="copyAccount()">계좌번호 복사</button>
+
+    <div class="kakaopay">
+      <p style="margin:20px 0 10px;">또는 카카오페이로 송금하기</p>
+      <a href="https://qr.kakaopay.com/ABCDEFG123" target="_blank">카카오페이 송금</a>
+    </div>
+  </div>
+
+  <script>
+    function copyAccount() {
+      const text = document.getElementById('account').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("계좌번호가 복사되었습니다.");
+      }).catch(err => {
+        alert("복사 실패: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
