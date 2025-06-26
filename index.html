@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 60vh;
     }
     .card {
       background: white;
@@ -63,15 +63,17 @@
 </head>
 <body>
   <div class="card">
-    <h2>송금 계좌정보</h2>
-    <p><strong>은행:</strong> 대구은행</p>
-    <p><strong>계좌번호:</strong> <span id="account">01022225952</span></p>
+    <h2>송금하기</h2>
+    <p><strong>입금은행 : </strong> IM뱅크(대구은행)</p>
+    <p><strong>계좌번호 : </strong> <span id="account">01022225952</span></p>
     <button onclick="copyAccount()">계좌번호 복사</button>
-
-    <div class="kakaopay">
-      <p style="margin:20px 0 10px;">또는 카카오페이로 송금하기</p>
+	<br>
+		<br>
+	<div class="kakaopay">
+      <p style="margin:20px 0 10px;">카카오페이로 송금하기</p>
       <a href="https://qr.kakaopay.com/FOkp6G1nZ" target="_blank">카카오페이 송금</a>
     </div>
+    
   </div>
 
   <script>
