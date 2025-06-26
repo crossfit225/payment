@@ -59,6 +59,37 @@
       font-weight: bold;
       font-size: 16px;
     }
+
+	 /* Instagram Button Styling */
+        .instagram-button {
+            display: inline-flex; /* Use flexbox for icon and text alignment */
+            align-items: center; /* Vertically align icon and text */
+            padding: 10px 20px;
+            margin-top: 0px; /* Space from above elements */
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .instagram-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .instagram-icon {
+            width: 20px; /* Adjust icon size */
+            height: 20px;
+            margin-right: 8px; /* Space between icon and text */
+            vertical-align: middle;
+            /* To make the icon white on a colored background */
+            filter: brightness(0) invert(1);
+        }
   </style>
 </head>
 <body>
@@ -68,12 +99,17 @@
     <p><strong>계좌번호 : </strong> <span id="account">01022225952</span></p>
     <button onclick="copyAccount()">계좌번호 복사</button>
 	<br>
-		<br>
 	<div class="kakaopay">
       <p style="margin:20px 0 10px;">카카오페이로 송금하기</p>
       <a href="https://qr.kakaopay.com/FOkp6G1nZ" target="_blank">카카오페이 송금</a>
     </div>
-    
+	<br>
+	<h2>
+      <p style="margin:20px 0 10px;">Crossfit225 Instagram</p></h2>
+     <a href="https://www.instagram.com/crossfit225/" target="_blank" class="instagram-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="instagram-icon">
+        Follow
+    </a>
   </div>
 
   <script>
