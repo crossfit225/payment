@@ -5,130 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>송금 계좌안내</title>
   <style>
-    body {
-      background: #f9f9f9;
-      font-family: 'Pretendard', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 70vh;
-    }
-    .card {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+   body {
+	  background: #ffffff;
+	  font-family: 'Pretendard', sans-serif;
+	  margin: 0;
+	  padding: 0;
+	}
+   .card {
+	  background: white;
+	  padding: 20px 16px;
+	  border-radius: 0;
+	  box-shadow: none;
+	  width: 100%;
+	  max-width: 100%;
+	  text-align: center;
+	}
     .card h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .account-info {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-    .account-number {
-      font-weight: bold;
-      font-size: 20px;
-      color: #444;
-    }
-    button {
-      background-color: #5c8df6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #476bd2;
-    }
-  .kakaopay {
-  width: 100%;
-  padding: 0;
-  margin-top: 20px;
-}
+	  font-size: 24px;
+	  margin-bottom: 16px;
+	}
 
-.pay-title {
-  margin: 0 0 10px;
-  font-weight: bold;
-  text-align: center;
-  font-size: 16px;
-}
-
-.kakaopay-row {
-  display: flex;
-  width: 100%;
-}
-
-.kakaopay-row a {
-  flex: 1; /* 1:1:1 비율 */
-  padding: 14px 0;
-  background-color: #fee500;
-  color: #3c1e1e;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-.kakaopay-row a:not(:last-child) {
-  border-right: none; /* 중간 라인 제거 */
-}
-
-/* 드랍인 버튼 */
-.dropin {
-  display: block;
-  width: 100%;
-  margin-top: 8px;
-  padding: 10px 0;
-  background-color: #e0e0e0; /* 연한 회색 */
-  color: #333;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-
+	.account-info {
+	  font-size: 18px;
+	  margin-bottom: 10px;
+	}
+	
+	.account-number {
+	  font-size: 22px;
+	}
+	
+	button {
+	  padding: 14px 24px;
+	  font-size: 18px;
+	  border-radius: 8px;
+	  width: 100%;
+	  box-sizing: border-box;
+	}
 	  
+	.kakaopay-buttons {
+	  display: flex;
+	  width: 100%;
+	  margin-top: 12px;
+	}
+	
+	.kakaopay-buttons .kakao {
+	  flex: 1;
+	  padding: 14px 0;
+	  background-color: #fee500;
+	  color: #3c1e1e;
+	  font-weight: bold;
+	  font-size: 16px;
+	  text-align: center;
+	  text-decoration: none;
+	  border: 1px solid #ddd;
+	  box-sizing: border-box;
+	}
+	
+	.kakaopay-buttons .kakao:not(:last-child) {
+	  border-right: none;
+	}
+	
+	.dropin {
+	  display: block;
+	  width: 100%;
+	  margin-top: 10px;
+	  padding: 10px 0;
+	  background-color: #e0e0e0;
+	  color: #333;
+	  text-align: center;
+	  font-size: 14px;
+	  font-weight: bold;
+	  border-radius: 6px;
+	  text-decoration: none;
+	}
 
 	 /* Instagram Button Styling */
-        .instagram-button {
-            display: inline-flex; /* Use flexbox for icon and text alignment */
-            align-items: center; /* Vertically align icon and text */
-            padding: 10px 20px;
-            margin-top: 0px; /* Space from above elements */
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: bold;
-            transition: opacity 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        }
-
-        .instagram-button:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
-
-        .instagram-icon {
-            width: 20px; /* Adjust icon size */
-            height: 20px;
-            margin-right: 8px; /* Space between icon and text */
-            vertical-align: middle;
-            /* To make the icon white on a colored background */
-            filter: brightness(0) invert(1);
-        }
+	 .instagram-button {
+	            display: inline-flex; /* Use flexbox for icon and text alignment */
+	            align-items: center; /* Vertically align icon and text */
+	            padding: 10px 20px;
+	            margin-top: 0px; /* Space from above elements */
+	            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+	            color: white;
+	            border: none;
+	            border-radius: 5px;
+	            text-decoration: none;
+	            font-size: 1em;
+	            font-weight: bold;
+	            transition: opacity 0.3s ease, transform 0.2s ease;
+	            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	        }
+	
+	.instagram-button:hover {
+	    opacity: 0.9;
+	    transform: translateY(-1px);
+	}
+	
+	.instagram-icon {
+	    width: 20px; /* Adjust icon size */
+	    height: 20px;
+	    margin-right: 8px; /* Space between icon and text */
+	    vertical-align: middle;
+	    /* To make the icon white on a colored background */
+	    filter: brightness(0) invert(1);
+	}
   </style>
 </head>
 <body>
@@ -171,6 +151,7 @@
   </script>
 </body>
 </html>
+
 
 
 
