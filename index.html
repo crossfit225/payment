@@ -60,6 +60,40 @@
       font-size: 16px;
     }
 
+    .kakaopay-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.kakaopay-buttons a {
+  padding: 10px 16px;
+  background-color: #fee500;
+  color: #3c1e1e;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.kakaopay-buttons a:hover {
+  background-color: #fcd800;
+}
+
+.kakaopay-buttons a.dropin {
+  background-color: #5c8df6;
+  color: white;
+}
+
+.kakaopay-buttons a.dropin:hover {
+  background-color: #476bd2;
+}
+
+	  
+
 	 /* Instagram Button Styling */
         .instagram-button {
             display: inline-flex; /* Use flexbox for icon and text alignment */
@@ -94,21 +128,23 @@
 </head>
 <body>
   <div class="card">
-    <h2>송금하기</h2>
+    <h2>Crossfit225</h2>
     <p><strong>입금은행 : </strong> IM뱅크(대구은행)</p>
     <p><strong>계좌번호 : </strong> <span id="account">01022225952</span></p>
     <button onclick="copyAccount()">계좌번호 복사</button>
 	<br>
 	<div class="kakaopay">
-      <p style="margin:20px 0 10px;">카카오페이로 송금하기</p>
-      <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755" target="_blank">1달</a>
-<a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367" target="_blank">3달</a>
-<a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624" target="_blank">6달</a>
-<a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" target="_blank">드랍인</a>
-    </div>
+  <p style="margin:20px 0 10px;">카카오페이로 송금하기</p>
+  <div class="kakaopay-buttons">
+    <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755" target="_blank">1달</a>
+    <a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367" target="_blank">3달</a>
+    <a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624" target="_blank">6달</a>
+    <a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" target="_blank" class="dropin">드랍인</a>
+  </div>
+</div>
 	<br>
 	<h2>
-      <p style="margin:20px 0 10px;">Crossfit225 Instagram</p></h2>
+      <p style="margin:20px 0 10px;">Instagram</p></h2>
      <a href="https://www.instagram.com/crossfit225/" target="_blank" class="instagram-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="instagram-icon">
         Follow
@@ -127,4 +163,5 @@
   </script>
 </body>
 </html>
+
 
