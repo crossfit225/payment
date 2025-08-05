@@ -46,47 +46,56 @@
     button:hover {
       background-color: #476bd2;
     }
-   .kakaopay-fixed-row {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  margin-top: 10px;
+  .kakaopay {
+  width: 100%;
+  padding: 0;
+  margin-top: 20px;
 }
 
-.kakaopay-fixed-row a {
-  flex: 1 0 0; /* 균등 분배 */
-  min-width: 0; /* 줄바꿈 방지 */
-  padding: 10px 0;
+.pay-title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.kakaopay-row {
+  display: flex;
+  width: 100%;
+}
+
+.kakaopay-row a {
+  flex: 1; /* 1:1:1 비율 */
+  padding: 14px 0;
   background-color: #fee500;
   color: #3c1e1e;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
   text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid #ddd;
   box-sizing: border-box;
-  transition: background-color 0.3s ease;
 }
 
-.kakaopay-fixed-row a:hover {
-  background-color: #fcd800;
+.kakaopay-row a:not(:last-child) {
+  border-right: none; /* 중간 라인 제거 */
 }
 
 /* 드랍인 버튼 */
-.kakaopay .dropin {
+.dropin {
   display: block;
   width: 100%;
-  margin-top: 10px;
-  padding: 8px 0; /* 얇게 */
+  margin-top: 8px;
+  padding: 10px 0;
   background-color: #e0e0e0; /* 연한 회색 */
   color: #333;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
   text-align: center;
-  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
 }
+
 
 	  
 
@@ -130,16 +139,17 @@
     <button onclick="copyAccount()">계좌번호 복사</button>
 	<br>
 <div class="kakaopay">
-  <p style="margin:20px 0 10px;">카카오페이로 송금하기</p>
+  <p class="pay-title">카카오페이로 송금하기</p>
   
-  <div class="kakaopay-fixed-row">
-    <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755" target="_blank">1개월권</a>
-    <a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367" target="_blank">3개월권</a>
-    <a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624" target="_blank">6개월권</a>
+  <div class="kakaopay-row">
+    <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755">1개월권</a>
+    <a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367">3개월권</a>
+    <a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624">6개월권</a>
   </div>
   
-  <a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" target="_blank" class="dropin">드랍인</a>
+  <a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" class="dropin">드랍인</a>
 </div>
+
 	<br>
 	<h2>
       <p style="margin:20px 0 10px;">Instagram</p></h2>
@@ -161,6 +171,7 @@
   </script>
 </body>
 </html>
+
 
 
 
