@@ -1,149 +1,220 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>송금 계좌안내</title>
-  <style>
-   body {
-	  background: #ffffff;
-	  font-family: 'Pretendard', sans-serif;
-	  margin: 0;
-	  padding: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>송금 계좌안내</title>
+  <style>
+    body {
+	  background: #ffffff;
+	  font-family: 'Pretendard', sans-serif;
+	  margin: 0;
+	  padding: 0;
 	}
-   .card {
-	  background: white;
-	  padding: 20px 16px;
-	  width: 100%;
-	  text-align: center;
+    .card {
+	  background: white;
+	  padding: 20px 16px;
+	  max-width: 480px;
+	  margin: 0 auto;
+	  text-align: center;
 	}
-    .card h2 {
-	  font-size: 24px;
-	  margin-bottom: 16px;
+    .card h2 {
+	  font-size: 24px;
+	  margin-bottom: 16px;
 	}
 
 	.account-info {
-	  font-size: 18px;
-	  margin-bottom: 10px;
+	  font-size: 18px;
+	  margin-bottom: 10px;
 	}
 	
 	.account-number {
-	  font-size: 22px;
+	  font-size: 22px;
 	}
 	
 	button {
-	  padding: 10px 18px;
-	  font-size: 14px;
-	  border-radius: 6px;
-	  width: auto;
-	  background-color: #4676D7;
-	  color: white;
-	  border: none;
-	  margin-top: 10px;
+	  padding: 10px 18px;
+	  font-size: 14px;
+	  border-radius: 6px;
+	  width: auto;
+	  background-color: #4676D7;
+	  color: white;
+	  border: none;
+	  margin-top: 10px;
+	  cursor: pointer;
 	}
-	  
+	  
 	.kakaopay-buttons {
-	  display: flex;
-	  width: 100%;
-	  margin-top: 12px;
-	  gap: 8px;
+	  display: flex;
+	  width: 100%;
+	  margin-top: 12px;
+	  gap: 8px;
 	}
 	
 	.kakaopay-buttons .kakao {
-	  flex: 1;
-	  padding: 14px 0;
-	  background-color: #fee500;
-	  color: #3c1e1e;
-	  font-weight: bold;
-	  font-size: 16px;
-	  text-align: center;
-	  text-decoration: none;
-	  border: 2px solid #999;
-	  border-radius: 8px;
-	  box-sizing: border-box;
+	  flex: 1;
+	  padding: 14px 0;
+	  background-color: #fee500;
+	  color: #3c1e1e;
+	  font-weight: bold;
+	  font-size: 16px;
+	  text-align: center;
+	  text-decoration: none;
+	  border: 1px solid #e0e0e0;
+	  border-radius: 8px;
+	  box-sizing: border-box;
 	}
 	
 	.dropin {
-	  display: block;
-	  width: 100%;
-	  margin-top: 10px;
-	  padding: 6px 0;
-	  background-color: #e0e0e0;
+	  display: block;
+	  width: 100%;
+	  margin-top: 10px;
+	  padding: 14px 0;
+	  background-color: #f2f2f2;
+	  color: #333;
+	  text-align: center;
+	  font-size: 16px;
+	  font-weight: bold;
+	  border-radius: 8px;
+	  text-decoration: none;
+	}
+	
+	/* 카카오페이 타이틀 강조 */
+	.pay-title {
+	  margin-top: 30px;
+	  margin-bottom: 12px;
+	  font-size: 20px;
+	  font-weight: 700;
 	  color: #333;
-	  text-align: center;
-	  font-size: 14px;
-	  font-weight: bold;
-	  border-radius: 6px;
-	  text-decoration: none;
 	}
 
-	 /* Instagram Button Styling */
-	 .instagram-button {
-	    display: inline-flex;
-	    align-items: center;
-	    padding: 10px 20px;
-	    margin-top: 10px;
-	    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-	    color: white;
-	    border: none;
-	    border-radius: 5px;
-	    text-decoration: none;
-	    font-size: 1em;
-	    font-weight: bold;
-	    transition: opacity 0.3s ease, transform 0.2s ease;
-	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* --- 소셜 링크 섹션 --- */
+	.social-container {
+		display: flex;
+		justify-content: center;
+		gap: 24px; /* 버튼 사이 간격 */
+		margin-top: 30px;
+		align-items: flex-start;
+	}
+	
+	.social-item {
+		text-align: center;
+	}
+	
+	.social-title {
+		margin: 0 0 10px 0;
+		font-size: 16px;
+		font-weight: 500; /* Medium weight */
+		color: #555;
+	}
+	
+	/* Instagram Button */
+	.instagram-button {
+	    display: inline-flex;
+	    align-items: center;
+	    justify-content: center;
+	    padding: 10px 20px;
+	    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+	    color: white;
+	    border: none;
+	    border-radius: 5px;
+	    text-decoration: none;
+	    font-size: 1em;
+	    font-weight: bold;
+	    transition: opacity 0.3s ease, transform 0.2s ease;
+	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 	
 	.instagram-button:hover {
-	    opacity: 0.9;
-	    transform: translateY(-1px);
+	    opacity: 0.9;
+	    transform: translateY(-1px);
 	}
 	
 	.instagram-icon {
-	    width: 20px;
-	    height: 20px;
-	    margin-right: 8px;
-	    vertical-align: middle;
-	    filter: brightness(0) invert(1);
+	    width: 20px;
+	    height: 20px;
+	    margin-right: 8px;
+	    vertical-align: middle;
+	    filter: brightness(0) invert(1);
 	}
-  </style>
+
+	/* Naver Cafe Button */
+	.naver-cafe-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 20px;
+		background-color: #03C75A; /* Naver Green */
+		color: white;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1em;
+		font-weight: bold;
+		transition: opacity 0.3s ease, transform 0.2s ease;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.naver-cafe-button:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
+	}
+
+	.naver-cafe-icon {
+		width: 18px; /* 아이콘 크기 조절 */
+		height: 18px;
+		margin-right: 8px;
+		vertical-align: middle;
+	}
+  </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Crossfit225</h2>
-    
-    <p><strong>입금은행 : </strong> IM뱅크(대구은행)</p>
-    <p><strong>계좌번호 : </strong> <span id="account">01022225952</span></p>
-    <button onclick="copyAccount()">계좌번호 복사</button>
+  <div class="card">
+    <h2>Crossfit225</h2>
+    
+    <p><strong>입금은행 : </strong> IM뱅크(대구은행)</p>
+    <p><strong>계좌번호 : </strong> <span id="account">01022225952</span></p>
+    <button onclick="copyAccount()">계좌번호 복사</button>
 
-    <div class="kakaopay">
-     <p class="pay-title" style="margin-top: 30px;">카카오페이로 송금하기</p>
-  
-    <div class="kakaopay-buttons">
-     <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755" class="kakao">1개월권</a>
-     <a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367" class="kakao">3개월권</a>
-     <a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624" class="kakao">6개월권</a>
-    </div>
-  
-     <a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" class="dropin">드랍인</a>
-    </div>
-	  
-    <p style="margin:20px 0 10px;">Instagram</p>
-    <a href="https://www.instagram.com/crossfit225/" target="_blank" class="instagram-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="instagram-icon">
-        Follow
-    </a>
-  </div>
+    <div class="kakaopay">
+      <p class="pay-title">카카오페이로 송금하기</p>
+  
+      <div class="kakaopay-buttons">
+        <a href="https://qr.kakaopay.com/FOkp6G1nZfde801755" class="kakao">1개월권</a>
+        <a href="https://qr.kakaopay.com/FOkp6G1nZ2ab9807367" class="kakao">3개월권</a>
+        <a href="https://qr.kakaopay.com/FOkp6G1nZ493e002624" class="kakao">6개월권</a>
+      </div>
+  
+      <a href="https://qr.kakaopay.com/FOkp6G1nZ1d4c06147" class="dropin">드랍인</a>
+    </div>
+	
+	<div class="social-container">
+		<div class="social-item">
+			<p class="social-title">Instagram</p>
+			<a href="https://www.instagram.com/crossfit225/" target="_blank" class="instagram-button">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="instagram-icon">
+				Follow
+			</a>
+		</div>
+		<div class="social-item">
+			<p class="social-title">NaverCafe</p>
+			<a href="https://cafe.naver.com/crossfit225" target="_blank" class="naver-cafe-button">
+				<img src="https://i.postimg.cc/P5k3LpY6/naver-icon-white.png" alt="Naver Cafe Icon" class="naver-cafe-icon">
+				cafe
+			</a>
+		</div>
+	</div>
+  </div>
 
-  <script>
-    function copyAccount() {
-      const text = document.getElementById('account').innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("계좌번호가 복사되었습니다.");
-      }).catch(err => {
-        alert("복사 실패: " + err);
-      });
-    }
-  </script>
+  <script>
+    function copyAccount() {
+      const text = document.getElementById('account').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("계좌번호가 복사되었습니다.");
+      }).catch(err => {
+        alert("복사 실패: " + err);
+      });
+    }
+  </script>
 </body>
 </html>
