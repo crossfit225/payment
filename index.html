@@ -77,6 +77,13 @@
 	  text-decoration: none;
 	}
 
+	.social-buttons-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px; /* 버튼 사이 간격 */
+	}
+	  
 	 /* Instagram Button Styling */
 	 .instagram-button {
 	    display: inline-flex;
@@ -106,6 +113,31 @@
 	    vertical-align: middle;
 	    filter: brightness(0) invert(1);
 	}
+
+	/* --- 네이버 카페 버튼 스타일 추가 --- */
+	.naver-cafe-button {
+		display: inline-flex;
+		align-items: center;
+		padding: 10px 20px;
+		background-color: #03C75A; /* 네이버 녹색 */
+		color: white;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1em;
+		font-weight: bold;
+		transition: opacity 0.3s ease, transform 0.2s ease;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+	.naver-cafe-button:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
+	}
+	.naver-cafe-icon {
+		width: 18px;
+		height: 18px;
+		margin-right: 8px;
+	}
   </style>
 </head>
 <body>
@@ -134,11 +166,16 @@
     
 	  
     <p style="margin:20px 0 10px;">Instagram</p>
+    <div class="social-buttons-wrapper">	  
     <a href="https://www.instagram.com/crossfit225/" target="_blank" class="instagram-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="instagram-icon">
         Follow
     </a>
-  </div>
+    <a href="https://cafe.naver.com/crossfit225" target="_blank" class="naver-cafe-button">
+	<img src="https://i.postimg.cc/P5k3LpY6/naver-icon-white.png" alt="Naver Cafe Icon" class="naver-cafe-icon">    
+	Cafe
+    </a>
+    </div>
 
   <script>
     function copyAccount() {
@@ -152,6 +189,7 @@
   </script>
 </body>
 </html>
+
 
 
 
